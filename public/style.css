@@ -1,0 +1,31 @@
+.menu {
+  border: 2px solid blue;
+  position: fixed;
+  width: 15vw;
+  height: 100vh;
+}
+
+.header {
+  border: 2px solid yellow;
+  position: relative;
+  width: 85vw;
+  left: 15.5vw;
+  height: 10vh;
+}
+
+.main {
+  border: 2px solid green;
+  position: relative;
+  left: 15.5vw;
+  width: 85vw;
+  height: 90vh;
+}
+
+.displayed {
+  display: block;
+  transition-delay: 0.3s;
+}
+
+.not-displayed {
+  display: none;
+}
