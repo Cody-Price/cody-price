@@ -1,4 +1,4 @@
-const menuBtn = document.querySelector('.menu-btn');
+const menuBtn = document.querySelector('.display-menu-btn');
 const menu = document.querySelector('.menu');
 const main = document.querySelector('.main');
 const header = document.querySelector('.header');
@@ -14,8 +14,8 @@ const toggleMenu = () => {
       menu.classList.remove('not-displayed')
       menu.classList.add('displayed')
     }, 300);
-    main.setAttribute("style", "width: 85vw; left: 15.5vw; transition: 0.3s;")
-    header.setAttribute("style", "width: 85vw; left: 15.5vw; transition: 0.3s;")
+    main.setAttribute("style", "width: 85vw; left: 15vw; transition: 0.3s;")
+    header.setAttribute("style", "width: 85vw; left: 15vw; transition: 0.3s;")
   }
 }
 
