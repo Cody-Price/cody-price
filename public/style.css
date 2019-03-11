@@ -112,6 +112,12 @@ body {
   color: white;
   font-size: 1.2rem;
   padding: 10px;
+  transition-duration: 0.5s;
+}
+
+.transition {
+  transition-duration: 0.5s;
+  opacity: 0;
 }
 
 .displayed {

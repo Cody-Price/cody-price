@@ -8,6 +8,11 @@ const blogBtn = document.querySelector('.blog');
 const contactBtn = document.querySelector('.contact');
 const content = document.querySelector('.content');
 
+const aboutMeHTML = `<p>about me</p>`
+const projectsHTML = `<p>projects</p>`
+const blogHTML = `<p>blog</p>`
+const contactHTML = `<p>contact</p>`
+
 const toggleMenu = () => {
   if (menu.classList.contains('displayed')) {
     menu.classList.add('not-displayed')
@@ -28,17 +33,46 @@ const changeContent = (givenContent) => {
   content.innerHTML = givenContent
 }
 
+// event listeners
+
 menuBtn.addEventListener('click', toggleMenu)
+
 aboutBtn.addEventListener('click', () => {
-  changeContent(`<p>about me</p>`)
-  content.setAttribute("style", "height: 1px;")
+  setTimeout(() => {
+    content.classList.add('transition')
+  }, 0);
+  setTimeout(() => {
+    content.classList.remove('transition')
+    changeContent(aboutMeHTML)
+  }, 1000);
 })
+
 projectsBtn.addEventListener('click', () => {
-  changeContent(`<p>projects</p>`)
+  setTimeout(() => {
+    content.classList.add('transition')
+  }, 0);
+  setTimeout(() => {
+    content.classList.remove('transition')
+    changeContent(projectsHTML)
+  }, 1000);
 })
+
 blogBtn.addEventListener('click', () => {
-  changeContent(`<p>blog</p>`)
+  setTimeout(() => {
+    content.classList.add('transition')
+  }, 0);
+  setTimeout(() => {
+    content.classList.remove('transition')
+    changeContent(blogHTML)
+  }, 1000);
 })
+
 contactBtn.addEventListener('click', () => {
-  changeContent(`<p>contact</p>`)
+  setTimeout(() => {
+    content.classList.add('transition')
+  }, 0);
+  setTimeout(() => {
+    content.classList.remove('transition')
+    changeContent(contactHTML)
+  }, 1000);
 })
