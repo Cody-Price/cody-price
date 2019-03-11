@@ -2,6 +2,11 @@ const menuBtn = document.querySelector('.display-menu-btn');
 const menu = document.querySelector('.menu');
 const main = document.querySelector('.main');
 const header = document.querySelector('.header');
+const aboutBtn = document.querySelector('.about');
+const projectsBtn = document.querySelector('.projects');
+const blogBtn = document.querySelector('.blog');
+const contactBtn = document.querySelector('.contact');
+const content = document.querySelector('.content');
 
 const toggleMenu = () => {
   if (menu.classList.contains('displayed')) {
@@ -19,4 +24,21 @@ const toggleMenu = () => {
   }
 }
 
+const changeContent = (givenContent) => {
+  content.innerHTML = givenContent
+}
+
 menuBtn.addEventListener('click', toggleMenu)
+aboutBtn.addEventListener('click', () => {
+  changeContent(`<p>about me</p>`)
+  content.setAttribute("style", "height: 1px;")
+})
+projectsBtn.addEventListener('click', () => {
+  changeContent(`<p>projects</p>`)
+})
+blogBtn.addEventListener('click', () => {
+  changeContent(`<p>blog</p>`)
+})
+contactBtn.addEventListener('click', () => {
+  changeContent(`<p>contact</p>`)
+})
