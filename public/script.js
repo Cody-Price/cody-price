@@ -36,6 +36,15 @@ const toggleMenu = () => {
   }
 }
 
+
+setTimeout(() => {
+  content.setAttribute("style", "opacity: 1;")
+}, 1000);
+
+setTimeout(() => {
+  header.setAttribute("style", "opacity: 1;")
+}, 2000);
+
 const changeContent = (givenContent) => {
   content.innerHTML = givenContent
 }

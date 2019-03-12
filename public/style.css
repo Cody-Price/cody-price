@@ -62,6 +62,7 @@ body {
   flex-direction: row;
   align-items: center;
   padding-left: 3vw;
+  transition-duration: 1s;
 }
 
 .display-menu-btn {
@@ -91,7 +92,7 @@ body {
 .header-title {
   color: white;
   position: fixed;
-  left: 74.5vw;
+  left: 45vw;
   font-size: 3rem;
   font-family: 'Kalam', Arial, Helvetica, sans-serif;
 }
@@ -111,11 +112,13 @@ body {
   width: 90.2%;
   color: white;
   font-size: 1.2rem;
-  padding: 10px;
-  transition-duration: 0.7s;
+  padding: 20px;
+  transition-duration: 1s;
   border-radius: 5px;
   max-height: 570px;
   overflow: scroll;
+  font-size: 2rem;
+  line-height: 5vh;
 }
 
 .transition {
