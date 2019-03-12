@@ -20,6 +20,7 @@ body {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  transition-duration: 1s;
 }
 
 .menu-btn {
@@ -54,8 +55,8 @@ body {
   background-color: #000000a9;
   position: fixed;
   top: 7.4vh;
-  width: 85vw;
-  left: 15vw;
+  width: 100vw;
+  /* left: 15vw; */
   height: 10vh;
   z-index: 1;
   display: flex;
@@ -73,10 +74,12 @@ body {
   cursor: pointer;
   position: relative;
   top: 4px;
+  transition-duration: 0.3s;
 }
 
 .display-menu-btn:hover {
   color: white;
+  transition-duration: 0.3s;
 }
 
 .display-menu-btn:active {
@@ -99,9 +102,10 @@ body {
 
 .main {
   position: relative;
-  left: 15.5vw;
-  width: 85vw;
+  /* left: 15.5vw; */
+  width: 100vw;
   height: 100vh;
+  transition-duration: 1s;
 }
 
 .content {
@@ -121,6 +125,10 @@ body {
   line-height: 5vh;
 }
 
+.content:hover {
+  background-color: #000000d8;
+}
+
 .transition {
   transition-duration: 0.7s;
   opacity: 0;
@@ -129,8 +137,12 @@ body {
 .displayed {
   display: flex;
   transition-delay: 0.3s;
+  /* transition-duration: 0.3s; */
+  opacity: 1;
 }
 
 .not-displayed {
-  display: none;
+  /* display: none; */
+  opacity: 0;
+  transition-duration: 0.3s;
 }

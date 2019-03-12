@@ -27,22 +27,20 @@ const toggleMenu = () => {
     main.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
     header.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
   } else {
-    setTimeout(() => {
-      menu.classList.remove('not-displayed')
-      menu.classList.add('displayed')
-    }, 300);
-    main.setAttribute("style", "width: 85vw; left: 15vw; transition: 0.3s;")
-    header.setAttribute("style", "width: 85vw; left: 15vw; transition: 0.3s;")
+    menu.classList.remove('not-displayed')
+    menu.classList.add('displayed')
+    main.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
+    header.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
   }
 }
 
 
 setTimeout(() => {
-  content.setAttribute("style", "opacity: 1;")
+  main.setAttribute("style", "opacity: 1; width: 100vw; left: 0px;")
 }, 1000);
 
 setTimeout(() => {
-  header.setAttribute("style", "opacity: 1;")
+  header.setAttribute("style", "opacity: 1; width: 100vw; left: 0px;")
 }, 2000);
 
 const changeContent = (givenContent) => {
