@@ -15,7 +15,7 @@ body {
   position: fixed;
   width: 15vw;
   height: 100vh;
-  background-color: #0000006b;
+  background-color: #000000a9;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -51,7 +51,7 @@ body {
 }
 
 .header {
-  background-color: #0000006b;
+  background-color: #000000a9;
   position: fixed;
   top: 7.4vh;
   width: 85vw;
@@ -91,7 +91,7 @@ body {
 .header-title {
   color: white;
   position: fixed;
-  left: 82vw;
+  left: 74.5vw;
   font-size: 3rem;
   font-family: 'Kalam', Arial, Helvetica, sans-serif;
 }
@@ -104,7 +104,7 @@ body {
 }
 
 .content {
-  background-color: #0000006b;
+  background-color: #000000a9;
   position: relative;
   top: 23vh;
   left: 3vw;
@@ -112,11 +112,14 @@ body {
   color: white;
   font-size: 1.2rem;
   padding: 10px;
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
+  border-radius: 5px;
+  max-height: 570px;
+  overflow: scroll;
 }
 
 .transition {
-  transition-duration: 0.5s;
+  transition-duration: 0.7s;
   opacity: 0;
 }
 

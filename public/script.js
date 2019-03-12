@@ -1,17 +1,24 @@
+// query selectors
+
 const menuBtn = document.querySelector('.display-menu-btn');
 const menu = document.querySelector('.menu');
 const main = document.querySelector('.main');
 const header = document.querySelector('.header');
+const headerTitle = document.querySelector('.header-title');
 const aboutBtn = document.querySelector('.about');
 const projectsBtn = document.querySelector('.projects');
 const blogBtn = document.querySelector('.blog');
 const contactBtn = document.querySelector('.contact');
 const content = document.querySelector('.content');
 
+// dynamic content
+
 const aboutMeHTML = `<p>about me</p>`
 const projectsHTML = `<p>projects</p>`
 const blogHTML = `<p>blog</p>`
 const contactHTML = `<p>contact</p>`
+
+// functional code
 
 const toggleMenu = () => {
   if (menu.classList.contains('displayed')) {
@@ -33,6 +40,10 @@ const changeContent = (givenContent) => {
   content.innerHTML = givenContent
 }
 
+const changeHeader = (givenContent) => {
+  headerTitle.innerText = `${givenContent}`
+}
+
 // event listeners
 
 menuBtn.addEventListener('click', toggleMenu)
@@ -44,7 +55,8 @@ aboutBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.remove('transition')
     changeContent(aboutMeHTML)
-  }, 1000);
+    changeHeader('About Me')
+  }, 700);
 })
 
 projectsBtn.addEventListener('click', () => {
@@ -54,7 +66,8 @@ projectsBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.remove('transition')
     changeContent(projectsHTML)
-  }, 1000);
+    changeHeader('My Projects')
+  }, 700);
 })
 
 blogBtn.addEventListener('click', () => {
@@ -64,7 +77,8 @@ blogBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.remove('transition')
     changeContent(blogHTML)
-  }, 1000);
+    changeHeader('My Blog')
+  }, 700);
 })
 
 contactBtn.addEventListener('click', () => {
@@ -74,5 +88,6 @@ contactBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.remove('transition')
     changeContent(contactHTML)
-  }, 1000);
+    changeHeader('Contact Me')
+  }, 700);
 })
