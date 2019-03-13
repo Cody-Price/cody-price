@@ -24,13 +24,17 @@ const toggleMenu = () => {
   if (menu.classList.contains('displayed')) {
     menu.classList.add('not-displayed')
     menu.classList.remove('displayed')
+    content.setAttribute("style", "width: 91%; transition: 0.3s;")
     main.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
     header.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
+    headerTitle.setAttribute("style", "margin-left: 10.5vw;")
   } else {
     menu.classList.remove('not-displayed')
     menu.classList.add('displayed')
+    content.setAttribute("style", "width: 89.4%; transition: 0.3s;")
     main.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
     header.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
+    headerTitle.setAttribute("style", "margin-left: 7.5vw;")
   }
 }
 
@@ -58,43 +62,59 @@ menuBtn.addEventListener('click', toggleMenu)
 aboutBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.add('transition')
+    headerTitle.classList.remove('slide-in-right')
+    headerTitle.classList.add('slide-out-right')
   }, 0);
   setTimeout(() => {
     content.classList.remove('transition')
+    headerTitle.classList.remove('slide-out-right')
+    headerTitle.classList.add('slide-in-right')
     changeContent(aboutMeHTML)
     changeHeader('About Me')
-  }, 700);
+  }, 1000);
 })
 
 projectsBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.add('transition')
+    headerTitle.classList.remove('slide-in-right')
+    headerTitle.classList.add('slide-out-right')
   }, 0);
   setTimeout(() => {
     content.classList.remove('transition')
+    headerTitle.classList.remove('slide-out-right')
+    headerTitle.classList.add('slide-in-right')
     changeContent(projectsHTML)
     changeHeader('My Projects')
-  }, 700);
+  }, 1000);
 })
 
 blogBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.add('transition')
+    headerTitle.classList.remove('slide-in-right')
+    headerTitle.classList.add('slide-out-right')
   }, 0);
   setTimeout(() => {
     content.classList.remove('transition')
+    headerTitle.classList.remove('slide-out-right')
+    headerTitle.classList.add('slide-in-right')
     changeContent(blogHTML)
     changeHeader('My Blog')
-  }, 700);
+  }, 1000);
 })
 
 contactBtn.addEventListener('click', () => {
   setTimeout(() => {
     content.classList.add('transition')
+    headerTitle.classList.remove('slide-in-right')
+    headerTitle.classList.add('slide-out-right')
   }, 0);
   setTimeout(() => {
     content.classList.remove('transition')
+    headerTitle.classList.remove('slide-out-right')
+    headerTitle.classList.add('slide-in-right')
     changeContent(contactHTML)
     changeHeader('Contact Me')
-  }, 700);
+  }, 1000);
 })

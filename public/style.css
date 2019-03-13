@@ -94,9 +94,15 @@ body {
 
 .header-title {
   color: white;
-  position: fixed;
-  left: 45vw;
-  font-size: 3rem;
+  /* position: fixed;
+  left: 74.5vw; */
+  text-align: right;
+  transition-duration: 0.3s;
+  width: 80%;
+  position: relative;
+  margin-left: 10.5vw;
+  /* right: 6vw; */
+  font-size: 3.3vw;
   font-family: 'Kalam', Arial, Helvetica, sans-serif;
 }
 
@@ -113,7 +119,7 @@ body {
   position: relative;
   top: 23vh;
   left: 3vw;
-  width: 90.2%;
+  width: 91%;
   color: white;
   font-size: 1.2rem;
   padding: 20px;
@@ -130,7 +136,7 @@ body {
 }
 
 .transition {
-  transition-duration: 0.7s;
+  /* transition-duration: s; */
   opacity: 0;
 }
 
@@ -145,4 +151,14 @@ body {
   /* display: none; */
   opacity: 0;
   transition-duration: 0.3s;
+}
+
+.slide-out-right {
+  transform: translateX(400px);
+  transition-duration: 0.5s;
+}
+
+.slide-in-right {
+  transform: translateX(0px);
+  transition-duration: 0.5s;
 }
