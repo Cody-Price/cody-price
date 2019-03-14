@@ -28,7 +28,7 @@ body {
   margin: 0 auto;
   width: 7vw;
   color: white;
-  background-color: #475f17;
+  background-color: #475f1700;
   border: 2px solid #c2f632;
   border-radius: 5px;
   transition-duration: 0.3s;
@@ -37,9 +37,11 @@ body {
 }
 
 .menu-btn:hover {
-  transition-duration: 0.3s;
-  background-color: #47311c;
+  transition-duration: 0.5s;
+  /* background-color: #47311c; */
   border-color: white;
+  /* transform: rotate(180deg); */
+  transform: scale(1.1);
 }
 
 .menu-btn:active {
