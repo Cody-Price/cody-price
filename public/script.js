@@ -20,6 +20,28 @@ const contactHTML = `<p>contact</p>`
 
 // functional code
 
+const animateMenuButtonsIn = () => {
+  setTimeout(() => {
+    contactBtn.classList.add('rotate-in')
+  }, 400);
+  setTimeout(() => {
+    blogBtn.classList.add('rotate-in')
+  }, 600);
+  setTimeout(() => {
+    projectsBtn.classList.add('rotate-in')
+  }, 800);
+  setTimeout(() => {
+    aboutBtn.classList.add('rotate-in')
+  }, 1000);
+}
+
+const resetMenuBtns = () => {
+  aboutBtn.classList.remove('rotate-in')
+  projectsBtn.classList.remove('rotate-in')
+  blogBtn.classList.remove('rotate-in')
+  contactBtn.classList.remove('rotate-in')
+}
+
 const toggleMenu = () => {
   if (menu.classList.contains('displayed')) {
     menu.classList.add('not-displayed')
@@ -28,6 +50,7 @@ const toggleMenu = () => {
     main.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
     header.setAttribute("style", "width: 100vw; left: 0px; transition: 0.3s;")
     headerTitle.setAttribute("style", "margin-left: 10.5vw;")
+    resetMenuBtns()
   } else {
     menu.classList.remove('not-displayed')
     menu.classList.add('displayed')
@@ -35,6 +58,7 @@ const toggleMenu = () => {
     main.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
     header.setAttribute("style", "transition: 0.3s; width: 85vw; left: 15vw;")
     headerTitle.setAttribute("style", "margin-left: 7.5vw;")
+    animateMenuButtonsIn()
   }
 }
 
@@ -54,7 +78,8 @@ const changeHeader = (givenContent) => {
   headerTitle.innerText = `${givenContent}`
 }
 
-const contentTransition = (html, title) => {
+const contentTransition = (e, html, title) => {
+  e.target.classList.toggle('btn-clicked-animate')
   setTimeout(() => {
     content.classList.add('transition')
     headerTitle.classList.remove('slide-in-right')
@@ -73,18 +98,18 @@ const contentTransition = (html, title) => {
 
 menuBtn.addEventListener('click', toggleMenu)
 
-aboutBtn.addEventListener('click', () => {
-  contentTransition(aboutMeHTML, 'About Me')
+aboutBtn.addEventListener('click', (e) => {
+  contentTransition(e, aboutMeHTML, 'About Me')
 })
 
-projectsBtn.addEventListener('click', () => {
-  contentTransition(projectsHTML, 'My Projects')
+projectsBtn.addEventListener('click', (e) => {
+  contentTransition(e, projectsHTML, 'My Projects')
 })
 
-blogBtn.addEventListener('click', () => {
-  contentTransition(blogHTML, 'My Blog')
+blogBtn.addEventListener('click', (e) => {
+  contentTransition(e, blogHTML, 'My Blog')
 })
 
-contactBtn.addEventListener('click', () => {
-  contentTransition(contactHTML, 'Contact Me')
+contactBtn.addEventListener('click', (e) => {
+  contentTransition(e, contactHTML, 'Contact Me')
 })
